@@ -7,11 +7,15 @@ export default new Vuex.Store({
   state: {
     todos: [
       {
-        title: "todo item a",
+        title: "väck mig",
+        author: "Khaled",
+        time: "10:10",
         completed: false
       },
       {
-        title: "todo item b",
+        title: "byt blöja",
+        author: "ahmad",
+        time: "10:10",
         completed: false
       },
     ]

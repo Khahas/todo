@@ -1,6 +1,8 @@
 <template>
   <div>
-    <input type="text" v-model="newTodoItem" />
+    <input type="text" id="fname" v-model="newTodoItem" /><br>
+    <input type="text" v-model="newTodoItem" /><br>
+    <input type="text" v-model="newTodoItem" /><br>
     <button @click="addNewTodoItem()">Submit</button>
   </div>
 </template>

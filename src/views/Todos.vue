@@ -1,22 +1,20 @@
 <template>
-  <div id="app">
-        
-          <Navbar />
-
-   
-    <router-view />
-
+  <div >
+        <h1>Todos</h1>
+    <h3>Completed: {{ completedTodos }}</h3>
+    <h3>Pending: {{ pendingTodos }}</h3>
+    <todos-list />
   </div>
-</template>
 
+</template>
 <script>
 import { mapGetters } from "vuex";
-import Navbar from "./components/Navbar";
+import TodosList from "../components/TodosList";
 
 export default {
-  name: "app",
+  name: "todos",
   components: {
-    Navbar
+    TodosList,
   },
 
   computed: {

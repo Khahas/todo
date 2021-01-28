@@ -11,6 +11,7 @@ import Todo from "./Todo";
 export default {
   components: {
     Todo
+    
   },
 
   computed: {

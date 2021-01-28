@@ -1,23 +1,22 @@
 <template>
-  <div id="app">
+  <div>
         
-          <Navbar />
 
-   
-    <router-view />
+  
+    <todo-form />
 
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import Navbar from "./components/Navbar";
+import TodoForm from "../components/TodoForm";
 
 export default {
   name: "app",
   components: {
-    Navbar
-  },
+    TodoForm
+      },
 
   computed: {
     ...mapGetters({

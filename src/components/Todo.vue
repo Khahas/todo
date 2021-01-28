@@ -2,6 +2,8 @@
   <div style="width:250px; margin:5px auto;">
     <div style="display:flex; justify-content:space-between">
       <span :class="{completed: todo.completed}" @click="toggleTodoStatus(todo)">{{ todo.title }}</span>
+      <span :class="{completed: todo.completed}" @click="toggleTodoStatus(todo)">{{ todo.author }}</span>
+      <span :class="{completed: todo.completed}" @click="toggleTodoStatus(todo)">{{ todo.time }}</span>
       <button @click="removeTodo(todo)">Delete</button>
     </div>
   </div>
