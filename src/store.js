@@ -7,15 +7,26 @@ export default new Vuex.Store({
   state: {
     todos: [
       {
-        title: "väck mig",
+        content: "väck mig",
         author: "Khaled",
-        time: "10:10",
+        time: "20:40:54        ",
         completed: false
       },
       {
-        title: "byt blöja",
-        author: "ahmad",
-        time: "10:10",
+        content: "byt blöja",
+        author: "Khaled",
+        time: "20:40:54        ",
+        completed: false
+      },
+      {
+        content: "Tvätta kläder",
+        author: "Khaled",
+        time: "20:40:54        ",
+        completed: false
+      }, {
+        content: "Laga välling",
+        author: "Khaled",
+        time: "20:40:54",
         completed: false
       },
     ]
@@ -25,27 +36,22 @@ export default new Vuex.Store({
   mutations: {
     addNewTodo(state, todoItem) {
       state.todos.push({
-        title: todoItem,
+        content: todoItem.content,
+        author: todoItem.author,
+        time: new Date().toLocaleTimeString(),
         completed: false
       })
     },
-
-    DELETE_TODO(state, todoItem) {
-      let index = state.todos.indexOf(todoItem);
-      state.todos.splice(index, 1);
-    },
-
-    TOGGLE_TODO_STATUS(state, todoItem) {
-      todoItem.completed = !todoItem.completed;
-    },
-    removeTodo(state, todoItem){
-    
+    removeTodo(state, todoItem) {
       state.todos = state.todos.filter(todo => todo !== todoItem)
     },
-  
-      addNewTodoItem (state, message) {
-        state.obj.message = message
-      } 
+    toggleTodoStatus(state, todoItem) {
+      todoItem.completed = !todoItem.completed;
+
+      return state.todos.filter(todo => {
+        return todo.completed === false;
+      }).length;
+    }
   },
-  
+
 });

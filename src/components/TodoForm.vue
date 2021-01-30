@@ -1,27 +1,31 @@
 <template>
   <div>
-    <input type="text"  v-model="newTodoItem" /><br>
-    <input type="text" v-model="newTodoItem" /><br>
-    <input type="text" v-model="newTodoItem" /><br>
+    <input type="text" placeholder="content" v-model="content" /><br />
+    <input type="text" placeholder="author" v-model="author" /><br />
 
     <button @click="addNewTodoItem()">Submit</button>
   </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      newTodoItem: ""
+      author: "",
+      content: "",
     };
   },
   methods: {
     addNewTodoItem() {
-      this.$store.commit("addNewTodo", this.newTodoItem);
-    }
+      var todoObject = {
+        content: this.content,
+        author: this.author,
+      };
+      this.$store.commit("addNewTodo", todoObject);
+      this.$router.push({'path': '/'})
+
+    },
   },
- 
 };
 </script>
 

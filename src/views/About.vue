@@ -1,35 +1,39 @@
 
 <template>
-  <div >
+  <div>
     <span>
-Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text.
- It has roots in a piece of classical Latin literature from 45 BC, 
- making it over 2000 years old. Richard McClintock, 
- a Latin professor at Hampden-Sydney College in Virginia, 
-looked up one of the more obscure Latin words, consectetur, 
-from a Lorem Ipsum passage, and going through the cites of the word 
-in classical literature, discovered the undoubtable source. 
-Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 
-"de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
- written in 45 BC. This book is a treatise on the theory of ethics, 
- very popular during the Renaissance. The first line of Lorem Ipsum, 
- "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is 
-reproduced below for those interested. Sections 1.10.32 and 
-1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also 
-reproduced in their exact original form, accompanied by English 
-versions from the 1914 translation by H. Rackham.
+      Todo-listan ska ha ett tydligt tema som ska genomsyra hela applikationen.
+      Vilket tema du väljer är helt valfritt men det måste finnas ett och det
+      betyder att ni måste ägna lite tid åt att styla er applikation på ett
+      passande sätt. 
+      Några exempel på teman kan vara Star Wars, Mario, Natur,
+      Hav, Skog, Någon Film, Serie och så vidare. 
+      
+      All kommunikation mellan komponenter ska ske via Vuex, förutom när det kommer till loopar, där är
+      det tillåtet att använda sig av props. 
+      
+      En tydlig navbar ska finnas för att
+      hantera navigationen. Det får inte förekomma några hårda sidomladdningar.
+      
+      På startsidan ska man tydligt kunna se vilka todo items som är uppskrivna.
+      
+      Man ska även kunna se vem (author) som har skrivit varje todo, en text som
+      beskriver vad som ska göras på varje todo (innehåll/content) samt en
+      timestamp (med svensk tid och datum) kopplad till varje todo. 
+      När applikationen startar ska fyra stycken olika todo redan vara uppskrivna.
+      Varje Todo ska kunna raderas med hjälp av någon form av knapp som tar bort
+      den todon som blivit klickad på. Kom ihåg, listan ska då uppdateras utan
+      att en hård sidomladdning genomförs. En about-sida med text (räcker med
+      lorem ipsum) ska finnas med en egen route. En sida där man kan skapa en ny
+      todo ska finnas, denna ska också ha en egen route. När man “submittat” sin
+      nya todo så ska man omdirigeras till startsidan där den nya todon direkt
+      ska ha dykt upp, och den ska då ha hamnat högst upp.
     </span>
-    
   </div>
-
 </template>
 <script>
-
 export default {
-  name: "todos"
+  name: "todos",
 };
 </script>
 
