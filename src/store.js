@@ -9,19 +9,19 @@ export default new Vuex.Store({
       {
         content: "väck mig",
         author: "Khaled",
-        time: "20:40:54        ",
+        time: "20:40:54",
         completed: false
       },
       {
         content: "byt blöja",
         author: "Khaled",
-        time: "20:40:54        ",
+        time: "20:40:54",
         completed: false
       },
       {
         content: "Tvätta kläder",
         author: "Khaled",
-        time: "20:40:54        ",
+        time: "20:40:54",
         completed: false
       }, {
         content: "Laga välling",
@@ -32,7 +32,6 @@ export default new Vuex.Store({
     ]
   },
 
-
   mutations: {
     addNewTodo(state, todoItem) {
       state.todos.push({
@@ -42,9 +41,11 @@ export default new Vuex.Store({
         completed: false
       })
     },
+
     removeTodo(state, todoItem) {
       state.todos = state.todos.filter(todo => todo !== todoItem)
     },
+
     toggleTodoStatus(state, todoItem) {
       todoItem.completed = !todoItem.completed;
 
