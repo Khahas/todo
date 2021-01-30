@@ -27,16 +27,9 @@ versions from the 1914 translation by H. Rackham.
 
 </template>
 <script>
-import { mapGetters } from "vuex";
 
 export default {
-  name: "todos",
-  computed: {
-    ...mapGetters({
-      completedTodos: "completedTodos",
-      pendingTodos: "pendingTodos"
-    })
-  }
+  name: "todos"
 };
 </script>
 

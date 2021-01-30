@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Todos from "../views/Todos.vue";
+import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import AddTodo from "../views/AddTodo.vue";
 
@@ -9,8 +9,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Todos",
-    component: Todos,
+    name: "Home",
+    component: Home,
   },
   {
     path: "/about",

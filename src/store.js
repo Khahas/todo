@@ -21,22 +21,9 @@ export default new Vuex.Store({
     ]
   },
 
-  getters: {
-    completedTodos(state) {
-      return state.todos.filter(todo => {
-        return todo.completed === true;
-      }).length;
-    },
-
-    pendingTodos(state) {
-      return state.todos.filter(todo => {
-        return todo.completed === false;
-      }).length;
-    }
-  },
 
   mutations: {
-    NEW_TODO(state, todoItem) {
+    addNewTodo(state, todoItem) {
       state.todos.push({
         title: todoItem,
         completed: false
@@ -50,20 +37,15 @@ export default new Vuex.Store({
 
     TOGGLE_TODO_STATUS(state, todoItem) {
       todoItem.completed = !todoItem.completed;
-    }
+    },
+    removeTodo(state, todoItem){
+    
+      state.todos = state.todos.filter(todo => todo !== todoItem)
+    },
+  
+      addNewTodoItem (state, message) {
+        state.obj.message = message
+      } 
   },
-
-  actions: {
-    addNewTodo({ commit }, todoItem) {
-      commit('NEW_TODO', todoItem);
-    },
-
-    deleteTodo({ commit }, todoItem) {
-      commit('DELETE_TODO', todoItem);
-    },
-
-    toggleTodoStatus({ commit }, todoItem) {
-      commit('TOGGLE_TODO_STATUS', todoItem);
-    }
-  }
+  
 });

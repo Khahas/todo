@@ -1,15 +1,10 @@
 <template>
   <div>
-        
-
-  
     <todo-form />
-
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import TodoForm from "../components/TodoForm";
 
 export default {
@@ -18,12 +13,6 @@ export default {
     TodoForm
       },
 
-  computed: {
-    ...mapGetters({
-      completedTodos: "completedTodos",
-      pendingTodos: "pendingTodos"
-    })
-  }
 };
 </script>
 

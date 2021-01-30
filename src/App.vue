@@ -1,29 +1,19 @@
 <template>
   <div id="app">
-        
           <Navbar />
-
-   
     <router-view />
 
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import Navbar from "./components/Navbar";
 
 export default {
   name: "app",
   components: {
-    Navbar
-  },
 
-  computed: {
-    ...mapGetters({
-      completedTodos: "completedTodos",
-      pendingTodos: "pendingTodos"
-    })
+    Navbar
   }
 };
 </script>

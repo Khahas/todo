@@ -10,16 +10,18 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
 export default {
   props: ["todo"],
 
   methods: {
-    ...mapActions({
-      removeTodo: "deleteTodo",
-      toggleTodoStatus: "toggleTodoStatus"
-    })
-  }
+    
+      removeTodo(){
+      // To access a mutation we use commit() and send in a mutatation name as string
+      // followed by the payload - something to manipulate our base students list with.
+      this.$store.commit('removeTodo', this.todo)
+    }
+    }
+  
 };
 </script>
 
