@@ -38,7 +38,7 @@ export default new Vuex.Store({
       state.todos.push({
         content: todoItem.content,
         author: todoItem.author,
-        time: new Date().toLocaleTimeString(),
+        time: new Date().toLocaleString(),
         completed: false
       })
     },
