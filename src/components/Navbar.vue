@@ -17,15 +17,8 @@ ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  background: pink;
+  background: rgb(66, 66, 66);
 }
-
-
-
-
-
-
-
 
 li {
   padding: 1rem 2rem;
