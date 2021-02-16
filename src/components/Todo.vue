@@ -1,7 +1,5 @@
 <template>
-  <div style="width: 250px; margin: 5px auto">
-    <div style="display: flex; justify-content: space-between;     flex-direction: column;    border-color: black;
-    border-style: double;">
+    <div class="todocard">
       <span
         :class="{ completed: todo.completed }"
         @click="toggleTodoStatus(todo)" > 
@@ -18,7 +16,6 @@
         >{{ todo.time }}
         </span>
       <button @click="removeTodo(todo)">Delete</button>
-    </div>
   </div>
 </template>
 
@@ -41,5 +38,18 @@ export default {
 <style scoped>
 .completed {
   text-decoration: line-through;
+}
+
+.todocard{
+display: flex; 
+justify-content: space-between;    
+flex-direction: column;    
+border-color: black;
+border-style: double;
+ background: url(../assets/logo.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 250px;
+   margin: 5px auto
 }
 </style>
